@@ -26,6 +26,22 @@ public class Account_details {
     {
         return this.pIn;
     }
+    public int changePin(int pIn)
+    {
+        int p;
+        System.out.println("Enter old pin");
+        p = input.nextInt();
+        if (p==pIn)
+        {
+            System.out.println("Enter new pin:");
+            this.pIn = input.nextInt();
+        }
+        else
+        {
+            System.out.println("The pin you have entered is wrong. Use your old pin");
+        }
+        return  this.pIn;
+    }
     public String get_name(){
         return this.name;
     }
