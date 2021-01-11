@@ -5,12 +5,17 @@ import java.util.Scanner;
 public class Nagad extends Account_details{
     final double cashoutCharge = 9.9;
     private int accountNumber;
+    double balance;
     int pin;
-    int inpin;
 
+    @Override
+    public double get_balance() {
+        balance = super.get_balance();
+        return balance;
+    }
     public Nagad(String name,int number,double balance, int pin){
         super(name,pin);
-        this.pin = pin;
+        this.pin = getPin();
         this.accountNumber = number;
     }
 
@@ -25,14 +30,9 @@ public class Nagad extends Account_details{
         else
         System.out.println("Sorry.Cash in limit exceeded");
     }
-
     public void cash_OutN() {
-        System.out.println("Enter pin");
-        inpin = input.nextInt();
-        if(inpin == this.pin)
-        {
-            cashOutNagad(cashoutCharge);
-        }
+
+        cashOutBkash(cashoutCharge);
     }
 
 }

@@ -64,49 +64,48 @@ import java.util.Scanner;
             System.out.println("Balance"+balance);
         }
         //    addmoney
-        public void cashOut()
+        public double cashOut()
         {
             System.out.println("Enter the amount to cashout");
             cash_out= input.nextDouble();
             if (balance >= cash_out){
                 balance = balance - cash_out;
-                System.out.println("Cash out done: " + cash_out);
+                System.out.println("Cash out done: ");
             }
 
             else {
                 System.out.println("Cashout is not possible");
             }
+            return balance;
         }
         public void cashOutBkash( double charge)
         {
             System.out.println("Enter the amount to cashout");
             cash_out= input.nextDouble();
-            if (cash_out <= 25000) {
-                balance = balance - ((cash_out * charge) / 1000);
+            if (cash_out <= 25000 && cash_out<=balance) {
+                balance = balance - cash_out-((cash_out * charge) / 1000);
             }
             else {
                 System.out.println("Cashout is not possible :(");
             }
         }
-
-        public void cashOutRocket( double charge)
+        public void cashOutRocket(double charge)
         {
             System.out.println("Enter the amount to cashout");
             cash_out= input.nextDouble();
-            if (cash_out <= 50000) {
-                balance = balance - ((cash_out * charge) / 1000);
+            if (cash_out <= 50000 && cash_out<=balance) {
+                balance = balance - cash_out- ((cash_out * charge) / 1000);
             }
             else {
                 System.out.println("Cashout is not possible :(");
             }
         }
-
-        public void cashOutNagad( double charge)
+        public void cashOutNagad(double charge)
         {
             System.out.println("Enter the amount to cashout");
             cash_out= input.nextDouble();
-            if (cash_out <= 30000) {
-                balance = balance - ((cash_out * charge) / 1000);
+            if (cash_out <= 30000 && cash_out<=balance) {
+                balance = balance - cash_out - ((cash_out * charge) / 1000);
             }
             else {
                 System.out.println("Cashout is not possible :(");

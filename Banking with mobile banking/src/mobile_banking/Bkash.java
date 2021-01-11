@@ -8,9 +8,10 @@ public class Bkash extends Account_details{
     int pin;
     int inpin;
 
+
     public Bkash(String name,int number,double balance, int pin){
         super(name,pin);
-        this.pin = pin;
+        this.pin = getPin();
         this.accountNumber = number;
     }
 
@@ -27,12 +28,8 @@ public class Bkash extends Account_details{
     }
 
         public void cash_OutB() {
-            System.out.println("Enter pin");
-            inpin = input.nextInt();
-            if(inpin == this.pin)
-            {
-                cashOutBkash(cashoutCharge);
-            }
+
+        cashOutBkash(cashoutCharge);
     }
 
 }

@@ -8,7 +8,7 @@ import java.util.Scanner;
             String name;
             int number;
             int pin,finalPin,inpin;
-            double cashin;
+            double cashin,cash_out;
             Scanner input = new Scanner(System.in);
 //        for 1st user
             System.out.println("Enter the Username");
@@ -25,21 +25,21 @@ import java.util.Scanner;
             finalPin = user1.getPin();
 //        setting pin
             Bkash user1b = new Bkash(name, number);
-            System.out.println("Enter the amount to keep");
+            System.out.println("Enter the amount to keep in Bkash");
             cashin= input.nextDouble();
             user1b.cashInBkash(cashin);
 
             Rocket user1r = new Rocket(name, number);
-            System.out.println("Enter the amount to keep");
+            System.out.println("Enter the amount to keep in Rocket");
             cashin= input.nextDouble();
             user1r.cashInRocket(cashin);
 
             Nagad user1n = new Nagad(name, number);
-            System.out.println("Enter the amount to keep");
+            System.out.println("Enter the amount to keep in Nagad");
             cashin= input.nextDouble();
             user1n.cashInNagad(cashin);
 
-            System.out.println("Enter the amount to keep");
+            System.out.println("Enter the amount to keep in bank");
             cashin= input.nextDouble();
             user1.addMoney(cashin);
             System.out.println("Enter pin");
@@ -49,6 +49,8 @@ import java.util.Scanner;
                 System.out.println("Phone number: " + user1.get_pnone_number());
                 System.out.println("Balance: " + user1.get_balance());
 
+                System.out.println("Enter the amount to cashout");
+                cash_out= input.nextDouble();
                 user1.cashOut();
                 System.out.println("Balance: " + user1.get_balance());
             }
@@ -56,9 +58,38 @@ import java.util.Scanner;
             {
                 System.out.println("Wrong pin");
             }
-            user1b.cash_OutB();
-            user1r.cash_OutR();
-            user1n.cash_OutN();
+            System.out.println("Enter pin");
+            inpin = input.nextInt();
+            if (finalPin==inpin) {
+                user1b.cash_OutB();
+                System.out.println("Balance: " + user1b.get_balance());
+            }
+            else
+            {
+                System.out.println("Wrong pin");
+            }
+
+            System.out.println("Enter pin");
+            inpin = input.nextInt();
+            if (finalPin==inpin) {
+                user1r.cash_OutR();
+                System.out.println("Balance: " + user1r.get_balance());
+            }
+            else
+            {
+                System.out.println("Wrong pin");
+            }
+
+            System.out.println("Enter pin");
+            inpin = input.nextInt();
+            if (finalPin==inpin) {
+                user1n.cash_OutN();
+                System.out.println("Balance: " + user1n.get_balance());
+            }
+            else
+            {
+                System.out.println("Wrong pin");
+            }
 
 //        for second user
             System.out.println("Enter the Username");
@@ -76,24 +107,24 @@ import java.util.Scanner;
 //        setting pin
 
             Bkash user2b = new Bkash(name, number);
-            System.out.println("Enter the amount to keep");
+            System.out.println("Enter the amount to keep in Bkash");
             cashin= input.nextDouble();
             user2b.cashInBkash(cashin);
 
             Rocket user2r = new Rocket(name, number);
-            System.out.println("Enter the amount to keep");
+            System.out.println("Enter the amount to keep Rocket");
             cashin= input.nextDouble();
             user2r.cashInRocket(cashin);
 
             Nagad user2n = new Nagad(name, number);
-            System.out.println("Enter the amount to keep");
+            System.out.println("Enter the amount to keep in Nagad");
             cashin= input.nextDouble();
             user2n.cashInNagad(cashin);
 
-            System.out.println("Enter the amount to keep");
+            System.out.println("Enter the amount to keep in bank");
             cashin= input.nextDouble();
             user2.addMoney(cashin);
-            System.out.println("Enter the amount to keep");
+            System.out.println("Enter the amount to keep in bank");
             cashin= input.nextDouble();
             user2.addMoney(cashin);
             System.out.println("Enter pin");
@@ -112,9 +143,38 @@ import java.util.Scanner;
                 System.out.println("Wrong pin");
             }
 
-            user2b.cash_OutB();
-            user2r.cash_OutR();
-            user2n.cash_OutN();
+            System.out.println("Enter pin");
+            inpin = input.nextInt();
+            if (finalPin==inpin) {
+                user2b.cash_OutB();
+                System.out.println("Balance: " + user2b.get_balance());
+            }
+            else
+            {
+                System.out.println("Wrong pin");
+            }
+
+            System.out.println("Enter pin");
+            inpin = input.nextInt();
+            if (finalPin==inpin) {
+                user2r.cash_OutR();
+                System.out.println("Balance: " + user2r.get_balance());
+            }
+            else
+            {
+                System.out.println("Wrong pin");
+            }
+
+            System.out.println("Enter pin");
+            inpin = input.nextInt();
+            if (finalPin==inpin) {
+                user2n.cash_OutN();
+                System.out.println("Balance: " + user2n.get_balance());
+            }
+            else
+            {
+                System.out.println("Wrong pin");
+            }
 
 
             user2.changePin(pin);
@@ -133,8 +193,38 @@ import java.util.Scanner;
                 System.out.println("Wrong pin");
             }
 
-            user2b.cash_OutB();
-            user2r.cash_OutR();
-            user2n.cash_OutN();
+            System.out.println("Enter pin");
+            inpin = input.nextInt();
+            if (finalPin==inpin) {
+                user2b.cash_OutB();
+                System.out.println("Balance: " + user2b.get_balance());
+            }
+            else
+            {
+                System.out.println("Wrong pin");
+            }
+
+            System.out.println("Enter pin");
+            inpin = input.nextInt();
+            if (finalPin==inpin) {
+                user2r.cash_OutR();
+                System.out.println("Balance: " + user2r.get_balance());
+            }
+            else
+            {
+                System.out.println("Wrong pin");
+            }
+
+            System.out.println("Enter pin");
+            inpin = input.nextInt();
+            if (finalPin==inpin) {
+                user2n.cash_OutN();
+                System.out.println("Balance: " + user2n.get_balance());
+            }
+            else
+            {
+                System.out.println("Wrong pin");
+            }
+
         }
 }
